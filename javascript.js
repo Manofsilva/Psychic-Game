@@ -15,23 +15,26 @@ var possibleChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
     document.onkeyup = function(event) {
         var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
         guessesSoFar.push(userGuess);
+        guessesLeft--;
        
         // variable for generating random letter from array
-        
+
         var possibleGuess = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
 
+        // create if statements
 
         if(userGuess === possibleGuess){
             wins++;
+            alert("How did you know?!?");
         }
-        else {
-            losses++;
-            guessesLeft--;
-        }
-
+        
         if(guessesLeft === 0){
+            losses++;
+            alert("You are not a psychic!");
             reset();
         }
+
+        // variables to update the HTML page
 
         var winsText = document.getElementById("winsValue");
         winsText.innerHTML = wins;
@@ -45,6 +48,8 @@ var possibleChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
         var guessesSoFarView = document.getElementById("guessessofarValue");
         guessesSoFarView.innerHTML = guessesSoFar.join(", ");
     };
+
+        // reset function
 
     var reset = function(){
         wins = 0;
