@@ -40,3 +40,11 @@ var possibleChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
     if(guessesLeft === 0){
         reset();
     }
+
+    // reset variable
+
+    var reset = function(){
+        wins = 0;
+        guessesLeft = 9;
+        guessesSoFar = [];
+    } 
