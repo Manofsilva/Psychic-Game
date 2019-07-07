@@ -10,13 +10,14 @@ var possibleChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
     var guessesLeft = 9;
 
   
-    /* This function is run whenever the user presses a key. */
+    // This function is run whenever the user presses a key.
+
     document.onkeyup = function(event) {
         var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
         guessesSoFar.push(userGuess);
        
-        // document.body.appendChild(winstext);
-        // document.write(winstext);
+        // variable for generating random letter from array
+        
         var possibleGuess = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
 
 
