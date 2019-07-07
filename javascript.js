@@ -27,3 +27,16 @@ var possibleChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
         document.onkeyup = function(event) {
         var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
         guessesSoFar.push(userGuess);
+
+    // created if statements.
+    if(userGuess === possibleGuess){
+        wins++;
+    }
+    else {
+        losses++;
+        guessesLeft--;
+    }
+
+    if(guessesLeft === 0){
+        reset();
+    }
