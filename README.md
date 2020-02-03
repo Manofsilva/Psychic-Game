@@ -29,5 +29,9 @@
 
 - The game increase the Losses counter and restarts the game without a page refresh (just like when the user wins).
 
+### Live site
+
+https://manofsilva.github.io/Psychic-Game/
+
 ### Demonstration
 ![gif](Psychic.gif)
