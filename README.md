@@ -30,5 +30,4 @@
 - The game increase the Losses counter and restarts the game without a page refresh (just like when the user wins).
 
 ### Demonstration
-
 ![gif](Psychic.gif)
